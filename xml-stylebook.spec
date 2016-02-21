@@ -4,7 +4,7 @@
 
 Name:          %{?scl_prefix}%{pkg_name}
 Version:       1.0
-Release:       0.14.b3_xalan2.svn313293.13%{?dist}
+Release:       0.14.b3_xalan2.svn313293.14%{?dist}
 Summary:       Apache XML Stylebook
 License:       ASL 1.1
 URL:           http://xml.apache.org/
@@ -52,7 +52,7 @@ Examples demonstrating the use of %{pkg_name}.
 
 %prep
 %setup -q -n %{pkg_name}-%{version}
-%{?scl:scl enable maven30 %{scl} - <<"EOF"}
+%{?scl:scl enable %{scl} - <<"EOF"}
 set -e -x
 %patch0 -p0
 %patch1 -p0
@@ -74,7 +74,7 @@ fi
 %{?scl:EOF}
 
 %build
-%{?scl:scl enable maven30 %{scl} - <<"EOF"}
+%{?scl:scl enable %{scl} - <<"EOF"}
 set -e -x
 export CLASSPATH=$(build-classpath xalan-j2 xerces-j2)
 ant
@@ -88,7 +88,7 @@ popd
 %{?scl:EOF}
 
 %install
-%{?scl:scl enable maven30 %{scl} - <<"EOF"}
+%{?scl:scl enable %{scl} - <<"EOF"}
 set -e -x
 # jars
 install -pD -T bin/stylebook-%{version}-b3_xalan-2.jar \
@@ -116,6 +116,9 @@ cp -pr results %{buildroot}%{_datadir}/%{pkg_name}
 %{_datadir}/%{pkg_name}
 
 %changelog
+* Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 1.0-0.14.b3_xalan2.svn313293.14
+- maven33 rebuild #2
+
 * Sat Jan 09 2016 Michal Srb <msrb@redhat.com> - 1.0-0.14.b3_xalan2.svn313293.13
 - maven33 rebuild
 
