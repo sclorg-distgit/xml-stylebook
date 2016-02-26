@@ -4,7 +4,7 @@
 
 Name:          %{?scl_prefix}%{pkg_name}
 Version:       1.0
-Release:       0.14.b3_xalan2.svn313293.14%{?dist}
+Release:       0.14.b3_xalan2.svn313293.15%{?dist}
 Summary:       Apache XML Stylebook
 License:       ASL 1.1
 URL:           http://xml.apache.org/
@@ -116,6 +116,9 @@ cp -pr results %{buildroot}%{_datadir}/%{pkg_name}
 %{_datadir}/%{pkg_name}
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 1.0-0.14.b3_xalan2.svn313293.15
+- Fix BR on maven-local & co.
+
 * Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 1.0-0.14.b3_xalan2.svn313293.14
 - maven33 rebuild #2
 
