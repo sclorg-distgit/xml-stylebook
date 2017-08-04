@@ -3,7 +3,7 @@
 
 Name:          %{?scl_prefix}xml-stylebook
 Version:       1.0
-Release:       0.21.b3_xalan2.svn313293.1%{?dist}
+Release:       0.21.b3_xalan2.svn313293.2%{?dist}
 Summary:       Apache XML Stylebook
 License:       ASL 1.1
 URL:           http://xml.apache.org/
@@ -95,6 +95,9 @@ cp -pr results %{buildroot}%{_datadir}/%{pkg_name}
 %{_datadir}/%{pkg_name} 
 
 %changelog
+* Thu Jun 22 2017 Michael Simacek <msimacek@redhat.com> - 1.0-0.21.b3_xalan2.svn313293.2
+- Mass rebuild 2017-06-22
+
 * Wed Jun 21 2017 Java Maintainers <java-maint@redhat.com> - 1.0-0.21.b3_xalan2.svn313293.1
 - Automated package import and SCL-ization
 
